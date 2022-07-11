@@ -7,10 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "_raze": "rimraf ./node_modules",
-    "raze": "run-s clean _raze",
     "clean": "rimraf ./build",
-    "exec": "run-s build exec-post-build",
-    "exec-post-build": "npx ./build/index.js",
+    "raze": "run-s clean _raze",
+    "exec": "npx ./build/index.js",
+    "start": "run-s build exec ",
     "start:dev": "nodemon"
   },
   "repository": {
