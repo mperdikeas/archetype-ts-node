@@ -1,0 +1,32 @@
+{
+  "name": "archetype-ts-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc",
+    "raze": "rm -fr build/* && rm -fr node_modules",
+    "exec": "run-s build exec-post-build",
+    "exec-post-build": "npx ./build/index.js",
+    "start:dev": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mperdikeas/archetype-ts-node.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mperdikeas/archetype-ts-node/issues"
+  },
+  "homepage": "https://github.com/mperdikeas/archetype-ts-node#readme",
+  "devDependencies": {
+    "@types/node": "^18.0.3",
+    "nodemon": "^2.0.19",
+    "npm-run-all": "^4.1.5",
+    "ts-node": "^10.8.2",
+    "typescript": "^4.7.4"
+  }
+}
